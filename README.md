@@ -1,6 +1,6 @@
 # AgriKonnekt · UNICEF Innovation Fund — Expression of Interest Microsite
 
-## Suggested subdomain: `uif.kilimora.africa`
+## subdomain: `uif.kilimora.africa`
 
 **Why `uif`:** it's the initialism of **U**NICEF **I**nnovation **F**und — the
 exact opportunity this microsite exists to support. It:
