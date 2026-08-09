@@ -16,7 +16,7 @@
  * or stale link still lands somewhere useful. Pair with the accompanying
  * .htaccess so LiteSpeed routes all of the above straight into this file.
  *
- * Fonts: EB Garamond (editorial) + Ubuntu (interface, home) + Agency FB
+ * Fonts: EB Garamond (editorial) + Ubuntu (interface) — the only two typefaces used site-wide
  *        (interface, subpages — local/system, falls back to Arial Narrow)
  *        + JetBrains Mono (data)
  * ═══════════════════════════════════════════════════════════════════════════
@@ -282,10 +282,10 @@ input,textarea,button{user-select:text}
 .subpage-sep{color:rgba(255,255,255,.25)}
 
 /* ── HERO : PRODUCT LAUNCH ── */
-.hero{position:relative;height:100vh;height:100svh;max-height:100vh;max-height:100svh;display:flex;flex-direction:column;overflow:hidden;background:var(--void)}
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;overflow:visible;background:var(--void)}
 .hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55}
 .hero::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 20%,rgba(201,240,77,.08),transparent 55%),linear-gradient(180deg,rgba(6,8,5,.35) 0%,rgba(6,8,5,.22) 35%,rgba(6,8,5,.3) 100%)}
-.hero-in{position:relative;z-index:2;width:100%;height:100%;display:flex;flex-direction:column;justify-content:center;padding:calc(var(--nav) + 1.2vh) 0 1.6vh;overflow:hidden;box-sizing:border-box}
+.hero-in{position:relative;z-index:2;width:100%;min-height:100%;display:flex;flex-direction:column;justify-content:center;padding:calc(var(--nav) + 1.2vh) 0 1.6vh;overflow:visible;box-sizing:border-box}
 .hero-badge{display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:clamp(8.5px,1.05vh,10.5px);font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--lime-soft);border:1px solid rgba(201,240,77,.3);padding:clamp(5px,.9vh,8px) 16px;border-radius:100px;margin-bottom:clamp(10px,1.5vh,20px);flex-shrink:0}
 .hero-badge .dot{width:6px;height:6px;border-radius:50%;background:var(--lime);animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
@@ -310,7 +310,7 @@ input,textarea,button{user-select:text}
 
 
 /* ── SECTION HEADS ── */
-.stitle{font-size:clamp(34px,4.2vw,56px);font-weight:600;margin-bottom:20px;max-width:780px}
+.stitle{font-size:clamp(26px,3.2vw,40px);font-weight:600;margin-bottom:20px;max-width:780px}
 .slead{font-family:'EB Garamond',serif;font-style:italic;font-size:22px;color:var(--soft);max-width:660px;margin-bottom:52px;line-height:1.75}
 .section-void .slead,.section-forest .slead{color:rgba(255,255,255,.6)}
 
@@ -462,8 +462,6 @@ input,textarea,button{user-select:text}
 .credit-spotlight::after{content:'✦';position:absolute;top:16px;right:26px;color:var(--lime);font-size:16px;opacity:.55}
 .credit-spotlight h4{font-family:'EB Garamond',serif;font-size:34px;color:#fff;margin:8px 0 14px;line-height:1.25}
 .credit-spotlight .cs-left p{font-size:19px;color:rgba(255,255,255,.62);line-height:1.75}
-/* Agency FB scoped to Credit Scoring / API sections only — not hosted via Google Fonts (Monotype-licensed), so it renders where installed locally and falls back gracefully elsewhere */
-.fb-zone,.fb-zone h3,.fb-zone h4,.fb-zone h5,.fb-zone p,.fb-zone li,.fb-zone strong,.fb-zone span{font-family:'Agency FB','Arial Narrow',Arial,sans-serif}
 .cs-list{display:flex;flex-direction:column;gap:14px}
 .cs-list li{font-size:16px;line-height:1.6;color:rgba(255,255,255,.62);padding-left:18px;position:relative}
 .cs-list li::before{content:'';position:absolute;left:0;top:6px;width:6px;height:6px;border-radius:50%;background:var(--lime)}
@@ -728,9 +726,9 @@ footer{background:#080906;color:rgba(255,255,255,.55);padding:48px 0 0}
 .subpage-sep{color:rgba(255,255,255,.25)}
 .hero-badge{display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--lime-soft);border:1px solid rgba(201,240,77,.3);padding:8px 16px;border-radius:100px;margin-bottom:26px}
 .hero-badge .dot{width:7px;height:7px;border-radius:50%;background:var(--lime);display:inline-block}
-.papi-hero h1{font-size:clamp(42px,6vw,70px);max-width:820px;line-height:1.12;margin-bottom:22px}
-.papi-hero .lead{font-family:'EB Garamond',serif;font-style:italic;font-size:25px;color:rgba(255,255,255,.62);max-width:640px;margin-bottom:34px;line-height:1.6}
-.papi-hero .slead{font-family:'EB Garamond',serif;font-style:italic;font-size:25px;color:rgba(255,255,255,.62);line-height:1.7}
+.papi-hero h1{font-size:clamp(30px,4.6vw,58px);max-width:820px;line-height:1.12;margin-bottom:20px}
+.papi-hero .lead{font-family:'EB Garamond',serif;font-style:italic;font-size:22px;color:rgba(255,255,255,.62);max-width:640px;margin-bottom:32px;line-height:1.6}
+.papi-hero .slead{font-family:'EB Garamond',serif;font-style:italic;font-size:22px;color:rgba(255,255,255,.62);line-height:1.7}
 .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:50px}
 .hero-stats{display:flex;gap:44px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.12);padding-top:28px}
 .hstat b{display:block;font-family:'JetBrains Mono',monospace;font-size:38px;color:var(--lime-soft);font-weight:700}
@@ -1009,13 +1007,13 @@ body[data-page="child-resilience-index"] .papi-hero::before{background:radial-gr
    ═══════════════════════════════════════════════════════════════════════ */
 body[data-page="child-aid-alignment"] .papi-hero,
 body[data-page="sport-development"] .papi-hero{
-  height:100vh;height:100svh;max-height:100vh;max-height:100svh;
+  min-height:100vh;min-height:100svh;
   display:flex;flex-direction:column;justify-content:center;
-  padding:calc(var(--nav) + 1.2vh) 0 1.6vh;overflow:hidden;box-sizing:border-box;
+  padding:calc(var(--nav) + 1.2vh) 0 1.6vh;overflow:visible;box-sizing:border-box;
 }
 body[data-page="child-aid-alignment"] .papi-hero > .wrap,
 body[data-page="sport-development"] .papi-hero > .wrap{
-  width:100%;max-height:100%;display:flex;flex-direction:column;overflow:hidden;box-sizing:border-box;
+  width:100%;display:flex;flex-direction:column;overflow:visible;box-sizing:border-box;
 }
 body[data-page="child-aid-alignment"] .papi-hero .subpage-bar,
 body[data-page="sport-development"] .papi-hero .subpage-bar{
@@ -1028,12 +1026,12 @@ body[data-page="sport-development"] .papi-hero .hero-badge{
 }
 body[data-page="child-aid-alignment"] .papi-hero h1,
 body[data-page="sport-development"] .papi-hero h1{
-  font-size:clamp(22px,3.8vh,56px)!important;margin-bottom:clamp(6px,1.1vh,14px)!important;
+  font-size:clamp(24px,4.8vh,58px)!important;margin-bottom:clamp(6px,1.1vh,14px)!important;
   line-height:1.12;flex-shrink:0;
 }
 body[data-page="child-aid-alignment"] .papi-hero .slead,
 body[data-page="sport-development"] .papi-hero .slead{
-  font-size:clamp(9.5px,1.2vh,14px);line-height:1.5;flex-shrink:0;
+  font-size:clamp(11px,1.3vh,16px);line-height:1.5;flex-shrink:0;
 }
 body[data-page="sport-development"] .papi-hero .slead + .slead{
   margin-top:clamp(4px,.8vh,14px)!important;
@@ -1070,17 +1068,17 @@ body[data-page="sport-development"] .papi-hero .hstat span{font-size:clamp(7px,.
 
 /* ── Fit-to-viewport hero — Financial Enablement ── */
 body[data-page="financial-enablement"] .papi-hero{
-  height:100vh;height:100svh;max-height:100vh;max-height:100svh;
+  min-height:100vh;min-height:100svh;
   display:flex;flex-direction:column;justify-content:center;
-  padding:calc(var(--nav) + 1.2vh) 0 1.6vh;overflow:hidden;box-sizing:border-box;
+  padding:calc(var(--nav) + 1.2vh) 0 1.6vh;overflow:visible;box-sizing:border-box;
 }
 body[data-page="financial-enablement"] .papi-hero > .wrap{
-  width:100%;max-height:100%;display:flex;flex-direction:column;overflow:hidden;box-sizing:border-box;
+  width:100%;display:flex;flex-direction:column;overflow:visible;box-sizing:border-box;
 }
 body[data-page="financial-enablement"] .papi-hero .subpage-bar{font-size:clamp(8px,.95vh,10.5px);margin-bottom:clamp(8px,1.6vh,30px);flex-shrink:0}
 body[data-page="financial-enablement"] .papi-hero .hero-badge{font-size:clamp(8px,.9vh,10.5px);padding:clamp(4px,.75vh,8px) 16px;margin-bottom:clamp(8px,1.5vh,26px)!important;flex-shrink:0}
-body[data-page="financial-enablement"] .papi-hero h1{font-size:clamp(22px,3.8vh,56px)!important;margin-bottom:clamp(6px,1.1vh,14px)!important;line-height:1.12;flex-shrink:0}
-body[data-page="financial-enablement"] .papi-hero .lead{font-size:clamp(9.5px,1.25vh,14px)!important;line-height:1.5;margin-bottom:clamp(8px,1.5vh,20px)!important;flex-shrink:0}
+body[data-page="financial-enablement"] .papi-hero h1{font-size:clamp(24px,4.8vh,58px)!important;margin-bottom:clamp(6px,1.1vh,14px)!important;line-height:1.12;flex-shrink:0}
+body[data-page="financial-enablement"] .papi-hero .lead{font-size:clamp(11px,1.3vh,16px)!important;line-height:1.5;margin-bottom:clamp(8px,1.5vh,20px)!important;flex-shrink:0}
 body[data-page="financial-enablement"] .papi-hero .hero-ctas{margin-bottom:clamp(8px,1.5vh,20px)!important;gap:12px;flex-shrink:0}
 body[data-page="financial-enablement"] .papi-hero .hero-stats{padding-top:clamp(8px,1.3vh,20px);gap:clamp(14px,3vw,44px);flex-shrink:0}
 body[data-page="financial-enablement"] .papi-hero .sdg-strip{margin-top:clamp(6px,1.3vh,20px)!important;gap:clamp(4px,.7vh,8px);flex-shrink:0}
@@ -1093,12 +1091,12 @@ body[data-page="financial-enablement"] .papi-hero .sdg-chip .sdg-num{width:clamp
    clamp, so it compresses proportionally and never spills past the
    fold, at any browser zoom level or window/aspect ratio. */
 body[data-page="climate-resilience"] .papi-hero{
-  height:100vh;height:100svh;max-height:100vh;max-height:100svh;
+  min-height:100vh;min-height:100svh;
   display:flex;flex-direction:column;justify-content:center;
-  padding:calc(var(--nav) + 1.2vh) 0 1.6vh;overflow:hidden;box-sizing:border-box;
+  padding:calc(var(--nav) + 1.2vh) 0 1.6vh;overflow:visible;box-sizing:border-box;
 }
 body[data-page="climate-resilience"] .papi-hero > .wrap{
-  width:100%;max-height:100%;display:flex;flex-direction:column;overflow:hidden;box-sizing:border-box;
+  width:100%;display:flex;flex-direction:column;overflow:visible;box-sizing:border-box;
 }
 body[data-page="climate-resilience"] .papi-hero .subpage-bar{
   font-size:clamp(8px,.95vh,10.5px);margin-bottom:clamp(6px,1.4vh,30px);flex-shrink:0;
@@ -1108,11 +1106,11 @@ body[data-page="climate-resilience"] .papi-hero .hero-badge{
   margin-bottom:clamp(6px,1.2vh,26px)!important;flex-shrink:0;
 }
 body[data-page="climate-resilience"] .papi-hero h1{
-  font-size:clamp(21px,3.4vh,52px)!important;margin-bottom:clamp(5px,1vh,14px)!important;
+  font-size:clamp(24px,4.8vh,58px)!important;margin-bottom:clamp(5px,1vh,14px)!important;
   line-height:1.12;flex-shrink:0;max-width:900px;
 }
 body[data-page="climate-resilience"] .papi-hero .slead{
-  font-size:clamp(9px,1.1vh,14px);line-height:1.5;flex-shrink:0;max-width:760px;
+  font-size:clamp(11px,1.3vh,16px);line-height:1.5;flex-shrink:0;max-width:760px;
 }
 body[data-page="climate-resilience"] .papi-hero .sdg-strip{
   margin-top:clamp(5px,1.1vh,20px)!important;gap:clamp(4px,.6vh,8px);flex-shrink:0;
@@ -1166,6 +1164,15 @@ body[data-page="climate-resilience"] .papi-hero .hstat span{font-size:clamp(6.5p
 /* ── LIQUID CURSOR GLOW (desktop, fine-pointer only) ── */
 #klCursorGlow{position:fixed;top:0;left:0;width:340px;height:340px;pointer-events:none;z-index:9999;border-radius:50%;background:radial-gradient(circle,rgba(201,240,77,.10),transparent 65%);transform:translate(-50%,-50%);will-change:transform;mix-blend-mode:screen}
 body[data-page="home"] #klCursorGlow{background:radial-gradient(circle,rgba(200,146,42,.10),transparent 65%);mix-blend-mode:multiply}
+
+/* ── Homepage-only: 3x vertical breathing room between sections ── */
+body[data-page="home"] .section{padding:360px 0}
+body[data-page="home"] .sys-board-head{padding:78px 0 42px}
+body[data-page="home"] footer{padding-top:144px}
+@media(max-width:900px){
+  body[data-page="home"] .section{padding:160px 0}
+  body[data-page="home"] footer{padding-top:96px}
+}
 @media(pointer:coarse),(prefers-reduced-motion:reduce){#klCursorGlow{display:none}}
 </style>
 </head>
@@ -1617,7 +1624,7 @@ body[data-page="home"] #klCursorGlow{background:radial-gradient(circle,rgba(200,
         <h4>Digital Farmer Identity</h4>
         <p>A verified production identity for every farmer and cooperative, enabling traceability, buyer trust, and access to climate finance and insurance on fair terms. For a household, that is the difference between being invisible and being able to plan.</p>
       </div>
-      <div class="sol-card fb-zone">
+      <div class="sol-card">
         <div class="sol-num">SYSTEM 03 · SCORE</div>
         <h4>AI Powered Credit Scoring API</h4>
         <p>An explainable credit model built on mobile money transaction history and airtime usage patterns, the record this household actually has in place of a bank statement it has never held. Savings and repayment discipline weigh as heavily as any credit signal, so it is the API layer lenders, SACCOs and insurers plug into to reach the farmers everyone else calls "unbanked," on terms sized to what a household can actually carry.</p>
@@ -1634,7 +1641,7 @@ body[data-page="home"] #klCursorGlow{background:radial-gradient(circle,rgba(200,
       </div>
     </div>
 
-    <div class="credit-spotlight fb-zone">
+    <div class="credit-spotlight">
       <div class="cs-left">
         <div class="mf-kicker" style="margin-bottom:6px">AI &amp; Technology · Innovation Track</div>
         <div class="sol-num">SYSTEM 03 · FINANCIAL ENABLEMENT — WHY IT IS HERE</div>
@@ -1660,7 +1667,7 @@ body[data-page="home"] #klCursorGlow{background:radial-gradient(circle,rgba(200,
       </div>
     </div>
 
-    <div class="metrics-framework fb-zone">
+    <div class="metrics-framework">
       <div class="eyebrow" style="margin-top:60px">Scoring Metrics — Deep Dive</div>
       <h3 style="font-family:'EB Garamond',serif;font-size:38px;color:#fff;margin:8px 0 12px;line-height:1.3;max-width:640px">Twelve metrics, each one an outcome of the household's credit review</h3>
       <p style="color:rgba(255,255,255,.6);max-width:680px;font-size:19px;line-height:1.75;margin-bottom:8px">Most credit models measure a single moment and freeze a household there; this one is built to measure direction instead. The score runs on a <strong style="color:#fff">120-point scale across twelve equally weighted metrics</strong>, scored 1 to 10 each, and every metric tied to a child's day to day life is structured so it can only ever add to the total. Retraining happens every quarter, aimed squarely at catching more families climbing.</p>
@@ -2066,7 +2073,7 @@ body[data-page="home"] #klCursorGlow{background:radial-gradient(circle,rgba(200,
     </div>
 
     <div class="eco-list">
-      <div class="eco-row"><span class="tag" style="background:var(--forest)"></span><div><h4>Farmer Cooperatives</h4><p>The source of truth for every record in the system, and the group whose trust determines whether verification is adopted rather than resisted.</p></div></div>
+      <div class="eco-row"><span class="tag" style="background:var(--forest)"></span><div><h4>Farmer Cooperatives</h4><p>The source of truth for every record in the system, and the group whose trust determines whether verification is adopted rather than resisted. Murang'a Farmers Cooperative Union is the planned site of the platform's first Education Centre of Excellence, training the youth who will run these systems next.</p></div></div>
       <div class="eco-row"><span class="tag" style="background:var(--forest)"></span><div><h4>Community Verification Networks</h4><p>The local layer of trusted peers who cross check a record before it ever reaches a funder or a lender, catching details a form alone would miss.</p></div></div>
       <div class="eco-row"><span class="tag" style="background:var(--gold)"></span><div><h4>County Extension Services</h4><p>The existing government channel through which agronomic advice already reaches communities, and the natural home for long term platform stewardship.</p></div></div>
       <div class="eco-row"><span class="tag" style="background:var(--gold)"></span><div><h4>Continental Policy Frameworks</h4><p>The regional agricultural and child wellbeing agendas this platform was built to plug into directly, rather than operate alongside as an afterthought.</p></div></div>
@@ -2115,6 +2122,7 @@ body[data-page="home"] #klCursorGlow{background:radial-gradient(circle,rgba(200,
       <div class="rm-item"><div class="rm-dot">Q2</div><div class="rm-body"><h4 style="color:#fff">Climate intelligence live</h4><p style="color:rgba(255,255,255,.65)">Deploy IoT and satellite monitoring with SMS advisory across pilot sites, and open the real time public data feed for external review.</p></div></div>
       <div class="rm-item"><div class="rm-dot">Q3</div><div class="rm-body"><h4 style="color:#fff">Market &amp; finance linkage</h4><p style="color:rgba(255,255,255,.65)">Connect verified farmers to aggregators, buyers and finance or insurance partners, and publish the first quarterly impact update.</p></div></div>
       <div class="rm-item"><div class="rm-dot">Q4</div><div class="rm-body"><h4 style="color:#fff">Scale &amp; open release</h4><p style="color:rgba(255,255,255,.65)">Publish the full BSD, CERN and CC BY licensed release, document lessons for replication, and prepare a scale up plan across additional counties and East African Community states.</p></div></div>
+      <div class="rm-item"><div class="rm-dot" style="background:var(--gold)">Y2</div><div class="rm-body"><h4 style="color:#fff">Education Centre of Excellence, Murang'a</h4><p style="color:rgba(255,255,255,.65)">Building on Year One's verified household data, establish a training base at Murang'a Farmers Cooperative Union to upskill high schoolers and post secondary youth in agri innovation, turning platform users into the next generation of builders and owners of the systems that serve their own communities.</p></div></div>
     </div>
   </div>
 </section>
@@ -2334,7 +2342,7 @@ body[data-page="home"] #klCursorGlow{background:radial-gradient(circle,rgba(200,
 <section class="section" id="how" style="padding-top:0">
   <div class="wrap reveal">
     <div class="eyebrow" style="justify-content:center">How It Works</div>
-    <h2 style="font-size:clamp(30px,3.6vw,42px);max-width:640px;margin:0 auto 8px;text-align:center">From a phone in someone's pocket to a decision a lender can stand behind</h2>
+    <h2 style="font-size:clamp(26px,3.2vw,40px);max-width:640px;margin:0 auto 8px;text-align:center">From a phone in someone's pocket to a decision a lender can stand behind</h2>
     <p class="slead" style="text-align:center;max-width:560px;margin:0 auto">Three steps, start to finish, using only the paperwork a household already has and returning a fully explained decision at the other end.</p>
     <div class="sd-path-row" style="grid-template-columns:repeat(3,1fr);margin-top:36px">
       <div class="sd-path-step">
@@ -2360,7 +2368,7 @@ body[data-page="home"] #klCursorGlow{background:radial-gradient(circle,rgba(200,
 <section class="section" style="padding-top:0">
   <div class="wrap reveal">
     <div class="eyebrow">The API, Feature by Feature</div>
-    <h2 style="font-size:clamp(30px,3.6vw,42px);max-width:640px;margin-bottom:40px">Everything a lender needs to underwrite a household the formal system has overlooked</h2>
+    <h2 style="font-size:clamp(26px,3.2vw,40px);max-width:640px;margin-bottom:40px">Everything a lender needs to underwrite a household the formal system has overlooked</h2>
     <div class="feat-grid">
       <div class="feat-card">
         <div class="feat-img"><img src="https://kilimora.africa/wp-content/uploads/2026/07/Children-Trad-Hut-scaled.jpg" alt="Alternative data engine reaching an unbanked household"></div>
@@ -2410,7 +2418,7 @@ body[data-page="home"] #klCursorGlow{background:radial-gradient(circle,rgba(200,
 <section class="section" style="padding-top:0">
   <div class="wrap reveal">
     <div class="eyebrow" style="justify-content:center">In This System We Trust</div>
-    <h2 style="font-size:clamp(30px,3.6vw,42px);max-width:640px;margin:0 auto 40px;text-align:center">Your data moves only where you can see it going</h2>
+    <h2 style="font-size:clamp(26px,3.2vw,40px);max-width:640px;margin:0 auto 40px;text-align:center">Your data moves only where you can see it going</h2>
     <div class="sd-dom-grid">
       <div class="sd-dom-card">
         <svg class="sd-dom-icon" viewBox="0 0 44 44" fill="none"><rect x="10" y="19" width="24" height="17" rx="3" stroke="url(#klIconGrad)" stroke-width="1.6"/><path d="M15 19v-5a7 7 0 0114 0v5" stroke="url(#klIconGrad)" stroke-width="1.6" stroke-linecap="round"/></svg>
@@ -2440,7 +2448,7 @@ body[data-page="home"] #klCursorGlow{background:radial-gradient(circle,rgba(200,
 <section class="section" id="demo" style="padding-top:0">
   <div class="wrap reveal">
     <div class="eyebrow">Try It</div>
-    <h2 style="font-size:clamp(30px,3.6vw,42px);max-width:640px">Move the sliders, watch the score respond</h2>
+    <h2 style="font-size:clamp(26px,3.2vw,40px);max-width:640px">Move the sliders, watch the score respond</h2>
     <p style="font-family:'EB Garamond',serif;font-style:italic;color:rgba(255,255,255,.55);max-width:600px;margin-top:8px">A simplified, illustrative version of the scoring engine. The live API scores directly from verified data, this just lets you feel how all eight factors add up.</p>
 
     <div class="demo-banner">
@@ -2506,7 +2514,7 @@ body[data-page="home"] #klCursorGlow{background:radial-gradient(circle,rgba(200,
 <section class="section" style="padding-top:0">
   <div class="wrap reveal">
     <div class="eyebrow" style="justify-content:center">Voices From The Field</div>
-    <h2 style="font-size:clamp(30px,3.6vw,42px);max-width:640px;margin:0 auto 40px;text-align:center">Good for the household, good for the lender behind it</h2>
+    <h2 style="font-size:clamp(26px,3.2vw,40px);max-width:640px;margin:0 auto 40px;text-align:center">Good for the household, good for the lender behind it</h2>
     <div class="voice-grid">
       <div class="voice-card">
         <p class="voice-quote">"I never had a bank statement to show anyone. Turns out my phone had been keeping the record the whole time. First loan I've ever qualified for."</p>
@@ -2537,7 +2545,7 @@ body[data-page="home"] #klCursorGlow{background:radial-gradient(circle,rgba(200,
 <section class="section" style="padding-top:0">
   <div class="wrap reveal">
     <div class="eyebrow" style="justify-content:center">Diversifying The Signal Set</div>
-    <h2 style="font-size:clamp(30px,3.6vw,42px);max-width:640px;margin:0 auto 8px;text-align:center">No single data point decides a household's future</h2>
+    <h2 style="font-size:clamp(26px,3.2vw,40px);max-width:640px;margin:0 auto 8px;text-align:center">No single data point decides a household's future</h2>
     <p class="slead" style="text-align:center;max-width:600px;margin:0 auto">Eight signals today, spread across income, savings, protection and resilience so the score stays fair even when any one signal goes quiet for a season. More are already in the pipeline.</p>
     <div class="sd-gap-grid" style="margin-top:30px">
       <div class="sd-gap-col sd-done">
@@ -2570,7 +2578,7 @@ body[data-page="home"] #klCursorGlow{background:radial-gradient(circle,rgba(200,
 <section class="section" id="docs" style="padding-top:0">
   <div class="wrap reveal">
     <div class="eyebrow">Documentation</div>
-    <h2 style="font-size:clamp(30px,3.6vw,42px);max-width:640px;margin-bottom:30px">One call in, a full breakdown out</h2>
+    <h2 style="font-size:clamp(26px,3.2vw,40px);max-width:640px;margin-bottom:30px">One call in, a full breakdown out</h2>
     <div class="doc-panel">
       <div class="code-block">
         <div class="cb-label">Request</div>
@@ -2635,7 +2643,7 @@ body[data-page="home"] #klCursorGlow{background:radial-gradient(circle,rgba(200,
   <div class="wrap">
     <div class="subpage-bar"><a href="/" class="subpage-crumb">Home</a><span class="subpage-sep">/</span><a href="/#explore-more" class="subpage-crumb">Initiative</a><span class="subpage-sep">/</span><span class="subpage-crumb is-current">Child Aid Alignment</span></div>
     <div class="hero-badge"><span class="dot"></span> Sector Fit · Built For Any Child Focused Partner</div>
-    <h1 style="font-size:clamp(34px,4.6vw,56px);max-width:820px;margin-bottom:14px">One platform, mapped onto the five things every child focused funder already shows up for</h1>
+    <h1 style="max-width:820px;margin-bottom:14px">One platform, mapped onto the five things every child focused funder already shows up for</h1>
     <p class="slead" style="max-width:700px">AgriKonnekt is built around five priorities: health, nutrition, education, clean water and emergency response, the same five that anchor most child wellbeing mandates. Every mechanism here is held to a verifiable standard, outcomes a funder can check independently, not enrollment numbers taken on trust.</p>
 
     <div class="sdg-strip" style="margin-top:24px">
@@ -2661,7 +2669,7 @@ body[data-page="home"] #klCursorGlow{background:radial-gradient(circle,rgba(200,
 <section class="section">
   <div class="wrap reveal">
     <div class="eyebrow">The Five Priorities</div>
-    <h2 style="font-family:'EB Garamond',serif;font-size:clamp(28px,3.6vw,36px);max-width:760px;margin-bottom:14px">Built around the same five things every family already worries about</h2>
+    <h2 style="font-family:'EB Garamond',serif;font-size:clamp(26px,3.2vw,40px);max-width:760px;margin-bottom:14px">Built around the same five things every family already worries about</h2>
     <p class="slead" style="max-width:700px;margin-bottom:36px">Whether the reviewer sits inside a UN agency, a bilateral aid ministry, a private foundation, or a national government department, these are the five outcomes almost every child focused mandate is ultimately scored against. AgriKonnekt was engineered around them directly, not retrofitted to claim them afterward.</p>
 
     <div class="pillar-grid">
@@ -2737,7 +2745,7 @@ body[data-page="home"] #klCursorGlow{background:radial-gradient(circle,rgba(200,
 <section class="section" style="padding-top:0">
   <div class="wrap reveal">
     <div class="eyebrow" style="justify-content:center">Ways To Partner</div>
-    <h2 style="font-size:clamp(30px,3.6vw,42px);max-width:640px;margin:0 auto 8px;text-align:center">Three ways in, whatever your mandate allows</h2>
+    <h2 style="font-size:clamp(26px,3.2vw,40px);max-width:640px;margin:0 auto 8px;text-align:center">Three ways in, whatever your mandate allows</h2>
     <p class="slead" style="text-align:center;max-width:560px;margin:0 auto">No single mechanism fits every institution. Pick the door that matches how your organisation already moves capital.</p>
     <div class="sd-path-row" style="grid-template-columns:repeat(3,1fr);margin-top:36px">
       <div class="sd-path-step">
@@ -2763,7 +2771,7 @@ body[data-page="home"] #klCursorGlow{background:radial-gradient(circle,rgba(200,
 <section class="section" style="background:var(--void-2);padding-top:80px;padding-bottom:80px">
   <div class="wrap reveal">
     <div class="eyebrow">How This Kind Of Funding Actually Works</div>
-    <h2 style="font-family:'EB Garamond',serif;font-size:clamp(28px,3.6vw,36px);color:#fff;margin-bottom:10px;max-width:700px">Built to satisfy the process, not retrofitted to survive it</h2>
+    <h2 style="font-family:'EB Garamond',serif;font-size:clamp(26px,3.2vw,40px);color:#fff;margin-bottom:10px;max-width:700px">Built to satisfy the process, not retrofitted to survive it</h2>
     <p style="color:rgba(255,255,255,.55);max-width:700px;margin-bottom:8px">Humanitarian venture funding, results based financing, and catalytic philanthropy alike do not simply grant capital. Each runs a structured process of its own, and this platform has been engineered to satisfy that process at every stage, whichever type of partner is reviewing it.</p>
     <div class="exec-list">
       <div class="exec-item"><b>Milestone linked capital</b><span>Early, often unrestricted funding tied to milestone based technical assistance rather than a single disbursement, the pattern used by innovation funds, development innovation grants and venture philanthropy alike.</span></div>
@@ -2778,7 +2786,7 @@ body[data-page="home"] #klCursorGlow{background:radial-gradient(circle,rgba(200,
 <section class="section" style="background:var(--void-2);padding-top:80px;padding-bottom:80px">
   <div class="wrap reveal">
     <div class="eyebrow">Who This Fits</div>
-    <h2 style="font-family:'EB Garamond',serif;font-size:clamp(28px,3.6vw,36px);color:#fff;margin-bottom:10px;max-width:700px">Written for the whole sector, not one funder in it</h2>
+    <h2 style="font-family:'EB Garamond',serif;font-size:clamp(26px,3.2vw,40px);color:#fff;margin-bottom:10px;max-width:700px">Written for the whole sector, not one funder in it</h2>
     <p style="font-family:'EB Garamond',serif;font-style:italic;color:rgba(255,255,255,.55);max-width:660px;font-size:19px">No single mechanism finances a child's whole path out of vulnerability. The categories below are illustrative of the kind of partner this platform is built to satisfy, drawn from across the sector rather than naming any one funder as the intended audience.</p>
     <div class="sd-eco-grid">
       <div class="sd-eco-card">
@@ -2861,7 +2869,7 @@ body[data-page="home"] #klCursorGlow{background:radial-gradient(circle,rgba(200,
   <div class="wrap">
     <div class="subpage-bar"><a href="/" class="subpage-crumb">Home</a><span class="subpage-sep">/</span><a href="/#explore-more" class="subpage-crumb">Initiative</a><span class="subpage-sep">/</span><span class="subpage-crumb is-current">Sport &amp; Community</span></div>
     <div class="hero-badge"><span class="dot"></span> Sister Initiative · Sport, Play &amp; Community Development</div>
-    <h1 style="font-size:clamp(34px,4.6vw,56px);max-width:820px;margin-bottom:14px">Somewhere right now, a child is deciding whether an empty afternoon becomes a football pitch, or a doorway to trouble</h1>
+    <h1 style="max-width:820px;margin-bottom:14px">Somewhere right now, a child is deciding whether an empty afternoon becomes a football pitch, or a doorway to trouble</h1>
     <p class="slead" style="max-width:700px">Somewhere in Nairobi right now, a child is deciding whether an empty afternoon becomes a football pitch or a doorway to trouble, and for most, there is no pitch waiting. That gap, not talent, is what this initiative closes. Sport anchors it as the best evidenced, most scalable starting point, backed by the studies below.</p>
 
     <div class="sdg-strip" style="margin-top:24px">
@@ -2896,7 +2904,7 @@ body[data-page="home"] #klCursorGlow{background:radial-gradient(circle,rgba(200,
 <section class="section">
   <div class="wrap reveal">
     <div class="eyebrow">The Case, Peer Reviewed</div>
-    <h2 style="font-family:'EB Garamond',serif;font-size:clamp(28px,3.6vw,36px);color:#fff;margin-bottom:10px;max-width:680px">Sport is not a side activity to a child's development. In the research, it is a delivery mechanism for most of it.</h2>
+    <h2 style="font-family:'EB Garamond',serif;font-size:clamp(26px,3.2vw,40px);color:#fff;margin-bottom:10px;max-width:680px">Sport is not a side activity to a child's development. In the research, it is a delivery mechanism for most of it.</h2>
     <div class="sd-ev-grid">
       <div class="sd-ev-card">
         <div class="sd-ev-tag">Psychological &amp; Social</div>
@@ -2964,7 +2972,7 @@ body[data-page="home"] #klCursorGlow{background:radial-gradient(circle,rgba(200,
 <section class="section">
   <div class="wrap reveal">
     <div class="eyebrow">Beyond The Pitch</div>
-    <h2 style="font-family:'EB Garamond',serif;font-size:clamp(28px,3.6vw,36px);color:#fff;margin-bottom:10px;max-width:700px">Why we call it Sport &amp; Community Development, and mean the second half of that name just as much</h2>
+    <h2 style="font-family:'EB Garamond',serif;font-size:clamp(26px,3.2vw,40px);color:#fff;margin-bottom:10px;max-width:700px">Why we call it Sport &amp; Community Development, and mean the second half of that name just as much</h2>
     <p style="font-family:'EB Garamond',serif;font-style:italic;color:rgba(255,255,255,.55);max-width:680px;font-size:19px;margin-bottom:24px">A basketball court in Jericho and a music room in Komarock are solving the same problem: a child with structured hours, a caring adult, and somewhere to belong. We build for both, and everything in between.</p>
     <div class="sd-dom-grid">
       <div class="sd-dom-card">
@@ -3001,7 +3009,7 @@ body[data-page="home"] #klCursorGlow{background:radial-gradient(circle,rgba(200,
 <section class="section" style="background:var(--void-2);padding-top:80px;padding-bottom:80px">
   <div class="wrap reveal">
     <div class="eyebrow">Systemic Change</div>
-    <h2 style="font-family:'EB Garamond',serif;font-size:clamp(28px,3.6vw,36px);color:#fff;margin-bottom:10px;max-width:680px">The organisations already doing this, and where each one sits in the system</h2>
+    <h2 style="font-family:'EB Garamond',serif;font-size:clamp(26px,3.2vw,40px);color:#fff;margin-bottom:10px;max-width:680px">The organisations already doing this, and where each one sits in the system</h2>
     <p style="font-family:'EB Garamond',serif;font-style:italic;color:rgba(255,255,255,.55);max-width:640px;font-size:19px">No single organisation covers a child's whole journey through sport. Real systemic change means these pieces working as one system instead of six separate ones that each only see a fraction of the child in front of them.</p>
     <div class="sd-eco-grid">
       <div class="sd-eco-card">
@@ -3055,7 +3063,7 @@ body[data-page="home"] #klCursorGlow{background:radial-gradient(circle,rgba(200,
 <section class="section">
   <div class="wrap reveal">
     <div class="eyebrow">Football, Specifically</div>
-    <h2 style="font-family:'EB Garamond',serif;font-size:clamp(28px,3.6vw,36px);color:#fff;margin-bottom:10px;max-width:680px">Football carries a career pathway most other sports do not, and that cuts both ways</h2>
+    <h2 style="font-family:'EB Garamond',serif;font-size:clamp(26px,3.2vw,40px);color:#fff;margin-bottom:10px;max-width:680px">Football carries a career pathway most other sports do not, and that cuts both ways</h2>
     <p style="font-family:'EB Garamond',serif;font-style:italic;color:rgba(255,255,255,.55);max-width:640px;font-size:19px">Millions of unregistered youth players across Africa may have real ability. Whether that turns into a scholarship or a scam depends entirely on the quality of the system around them, and right now, too often, there is no system at all.</p>
     <div class="sd-path-row">
       <div class="sd-path-step">
@@ -3086,7 +3094,7 @@ body[data-page="home"] #klCursorGlow{background:radial-gradient(circle,rgba(200,
 <section class="section" style="background:var(--void-2);padding-top:80px;padding-bottom:80px">
   <div class="wrap reveal">
     <div class="eyebrow">Honest Accounting</div>
-    <h2 style="font-family:'EB Garamond',serif;font-size:clamp(28px,3.6vw,36px);color:#fff;margin-bottom:16px;max-width:680px">What is already been done, and where it still falls short</h2>
+    <h2 style="font-family:'EB Garamond',serif;font-size:clamp(26px,3.2vw,40px);color:#fff;margin-bottom:16px;max-width:680px">What is already been done, and where it still falls short</h2>
     <div class="sd-gap-grid">
       <div class="sd-gap-col sd-done">
         <h4>Effort So Far</h4>
@@ -3189,7 +3197,7 @@ body[data-page="home"] #klCursorGlow{background:radial-gradient(circle,rgba(200,
 <section class="section">
   <div class="wrap reveal">
     <div class="eyebrow">Why This Pathway Exists</div>
-    <h2 class="stitle" style="font-size:clamp(28px,3.6vw,36px);max-width:700px">Children carry the heaviest cost of a changing climate, with the least say in the response</h2>
+    <h2 class="stitle" style="font-size:clamp(26px,3.2vw,40px);max-width:700px">Children carry the heaviest cost of a changing climate, with the least say in the response</h2>
     <div class="sd-ev-grid">
       <div class="sd-ev-card">
         <div class="sd-ev-tag">Exposure</div>
@@ -3265,7 +3273,7 @@ body[data-page="home"] #klCursorGlow{background:radial-gradient(circle,rgba(200,
 <section class="section">
   <div class="wrap reveal">
     <div class="eyebrow">Built On What Already Exists</div>
-    <h2 style="font-family:'EB Garamond',serif;font-size:clamp(28px,3.6vw,36px);color:#fff;margin-bottom:10px;max-width:700px">No new registration, no new device, no new agency required to start</h2>
+    <h2 style="font-family:'EB Garamond',serif;font-size:clamp(26px,3.2vw,40px);color:#fff;margin-bottom:10px;max-width:700px">No new registration, no new device, no new agency required to start</h2>
     <p style="font-family:'EB Garamond',serif;font-style:italic;color:rgba(255,255,255,.55);max-width:680px;font-size:19px;margin-bottom:24px">This is not a separate platform bolted on next to AgriKonnekt. It reads from the same verified household layer that already powers financial enablement and traceability, and it is built open source, so any ministry, hospital, school system, or community partner can run it under its own control.</p>
 
     <div class="exec-list">
@@ -3283,7 +3291,7 @@ body[data-page="home"] #klCursorGlow{background:radial-gradient(circle,rgba(200,
 <section class="section" style="background:var(--void-2);padding-top:80px;padding-bottom:80px">
   <div class="wrap reveal">
     <div class="eyebrow">Honest Accounting</div>
-    <h2 style="font-family:'EB Garamond',serif;font-size:clamp(28px,3.6vw,36px);color:#fff;margin-bottom:16px;max-width:680px">What is already been done, and where it still falls short</h2>
+    <h2 style="font-family:'EB Garamond',serif;font-size:clamp(26px,3.2vw,40px);color:#fff;margin-bottom:16px;max-width:680px">What is already been done, and where it still falls short</h2>
     <div class="sd-gap-grid">
       <div class="sd-gap-col sd-done">
         <h4>Effort So Far</h4>
@@ -3325,7 +3333,7 @@ body[data-page="home"] #klCursorGlow{background:radial-gradient(circle,rgba(200,
   <div class="wrap">
     <div class="subpage-bar"><a href="/" class="subpage-crumb">Home</a><span class="subpage-sep">/</span><a href="/#explore-more" class="subpage-crumb">Initiative</a><span class="subpage-sep">/</span><span class="subpage-crumb is-current">Child Resilience Index</span></div>
     <div class="hero-badge"><span class="dot"></span> System 05 · Child Resilience Index — Live Weather Feed, Prototype Scoring</div>
-    <h1 style="font-size:clamp(34px,4.6vw,56px);max-width:820px;margin-bottom:14px">One composite score for the whole situation a child is actually growing up in</h1>
+    <h1 style="max-width:820px;margin-bottom:14px">One composite score for the whole situation a child is actually growing up in</h1>
     <p class="slead" style="max-width:700px">Food security, whether school loses out to the harvest, and whether a shock arrives as a warning or a surprise: three questions that usually live in three different systems. This one combines them into a single explainable score, grounded in real household signals and a live weather feed, built to route support toward a household.</p>
     <div class="hero-ctas">
       <a href="#explorer" class="btn btn-solid">Try the Live Explorer</a>
@@ -3389,7 +3397,7 @@ body[data-page="home"] #klCursorGlow{background:radial-gradient(circle,rgba(200,
 <section class="section" id="how" style="padding-top:0">
   <div class="wrap reveal">
     <div class="eyebrow" style="justify-content:center">How It Works</div>
-    <h2 style="font-size:clamp(30px,3.6vw,42px);max-width:640px;margin:0 auto 8px;text-align:center">Three modules, one number a partner can act on the same day</h2>
+    <h2 style="font-size:clamp(26px,3.2vw,40px);max-width:640px;margin:0 auto 8px;text-align:center">Three modules, one number a partner can act on the same day</h2>
     <p class="slead" style="text-align:center;max-width:560px;margin:0 auto">Every household record already inside AgriKonnekt carries the signals this index needs. Nothing new to collect, just a different lens on data the system already has consent to see.</p>
     <div class="sd-path-row" style="grid-template-columns:repeat(3,1fr);margin-top:36px">
       <div class="sd-path-step">
@@ -3415,7 +3423,7 @@ body[data-page="home"] #klCursorGlow{background:radial-gradient(circle,rgba(200,
 <section class="section" style="padding-top:0">
   <div class="wrap reveal">
     <div class="eyebrow" style="justify-content:center">In This System We Trust</div>
-    <h2 style="font-size:clamp(30px,3.6vw,42px);max-width:640px;margin:0 auto 40px;text-align:center">A score about a child carries a higher bar, not a lower one</h2>
+    <h2 style="font-size:clamp(26px,3.2vw,40px);max-width:640px;margin:0 auto 40px;text-align:center">A score about a child carries a higher bar, not a lower one</h2>
     <div class="sd-dom-grid">
       <div class="sd-dom-card">
         <svg class="sd-dom-icon" viewBox="0 0 44 44" fill="none"><path d="M22 6l14 5v9c0 9-6 15-14 18-8-3-14-9-14-18v-9l14-5z" stroke="url(#klIconGrad)" stroke-width="1.6" stroke-linejoin="round"/><path d="M16 22l4 4 8-8" stroke="url(#klIconGrad)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -3445,7 +3453,7 @@ body[data-page="home"] #klCursorGlow{background:radial-gradient(circle,rgba(200,
 <section class="section" id="explorer" style="padding-top:0">
   <div class="wrap reveal">
     <div class="eyebrow">Try It</div>
-    <h2 style="font-size:clamp(30px,3.6vw,42px);max-width:640px">Move the sliders, watch all three modules respond</h2>
+    <h2 style="font-size:clamp(26px,3.2vw,40px);max-width:640px">Move the sliders, watch all three modules respond</h2>
     <p style="font-family:'EB Garamond',serif;font-style:italic;color:rgba(255,255,255,.55);max-width:620px;margin-top:8px">A simplified, illustrative version of the scoring engine. The climate module's first slider starts from the live weather feed above, real numbers, edit it and it stops following the feed.</p>
 
     <div class="demo-banner">
@@ -3565,7 +3573,7 @@ body[data-page="home"] #klCursorGlow{background:radial-gradient(circle,rgba(200,
 <section class="section" style="padding-top:0">
   <div class="wrap reveal">
     <div class="eyebrow" style="justify-content:center">Voices From The Field</div>
-    <h2 style="font-size:clamp(30px,3.6vw,42px);max-width:640px;margin:0 auto 40px;text-align:center">A number that tells a partner where to look first</h2>
+    <h2 style="font-size:clamp(26px,3.2vw,40px);max-width:640px;margin:0 auto 40px;text-align:center">A number that tells a partner where to look first</h2>
     <div class="voice-grid">
       <div class="voice-card">
         <p class="voice-quote">"We used to find out a child had stopped coming weeks after it happened. Now the school continuity score gives us a reason to check in before that gap opens."</p>
@@ -3596,7 +3604,7 @@ body[data-page="home"] #klCursorGlow{background:radial-gradient(circle,rgba(200,
 <section class="section" style="padding-top:0">
   <div class="wrap reveal">
     <div class="eyebrow" style="justify-content:center">Building Out The Index</div>
-    <h2 style="font-size:clamp(30px,3.6vw,42px);max-width:640px;margin:0 auto 8px;text-align:center">Started with three modules, on purpose</h2>
+    <h2 style="font-size:clamp(26px,3.2vw,40px);max-width:640px;margin:0 auto 8px;text-align:center">Started with three modules, on purpose</h2>
     <p class="slead" style="text-align:center;max-width:600px;margin:0 auto">Better to launch three well validated modules than ten untested ones. More arrive once local partners confirm the thresholds hold up across a full season.</p>
     <div class="sd-gap-grid" style="margin-top:30px">
       <div class="sd-gap-col sd-done">
@@ -3625,7 +3633,7 @@ body[data-page="home"] #klCursorGlow{background:radial-gradient(circle,rgba(200,
 <section class="section" id="docs" style="padding-top:0">
   <div class="wrap reveal">
     <div class="eyebrow">Documentation</div>
-    <h2 style="font-size:clamp(30px,3.6vw,42px);max-width:640px;margin-bottom:30px">One call in, three sub scores and a composite out</h2>
+    <h2 style="font-size:clamp(26px,3.2vw,40px);max-width:640px;margin-bottom:30px">One call in, three sub scores and a composite out</h2>
     <div class="doc-panel">
       <div class="code-block">
         <div class="cb-label">Request</div>
